@@ -128,4 +128,4 @@ Detalhes de build e empacotamento: [`docs/INSTRUCOES.md`](docs/INSTRUCOES.md)
 | `JBLParser_Setup.iss` (instalador)| 🔧 Em desenvolvimento — não publicado |
 | Ícone e assets visuais           | 🔧 Em desenvolvimento — não publicado |
 
-Este repositório é atualizado conforme o projeto avança. Para acesso ao código-fonte completo ou parceria no projeto, entre em contato com o mantenedor.
+Este repositório é atualizado conforme o projeto avança.

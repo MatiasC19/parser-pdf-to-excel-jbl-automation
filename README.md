@@ -2,8 +2,6 @@
 
 Aplicação desktop para extração automatizada de dados de faturas de energia elétrica (PDF) de clientes do Grupo A, com geração de planilhas Excel consolidadas para uso em dashboards Power BI.
 
-> **Status deste repositório:** projeto em desenvolvimento ativo. Alguns arquivos já estão publicados (scripts de build e documentação); o código-fonte da engine de extração e da interface gráfica ainda está em desenvolvimento privado e será publicado conforme avança. Veja a seção [Status de publicação](#status-de-publicação) abaixo para o detalhamento por arquivo.
-
 ---
 
 ## Visão geral

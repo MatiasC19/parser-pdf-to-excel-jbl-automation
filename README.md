@@ -2,7 +2,7 @@
 
 Aplicação desktop para extração automatizada de dados de faturas de energia elétrica (PDF) de clientes do Grupo A, com geração de planilhas Excel consolidadas para uso em dashboards Power BI.
 
-> **Status deste repositório:** documentação de arquitetura e funcionamento do projeto. O código-fonte completo está em desenvolvimento privado e será compartilhado conforme o andamento do projeto. Este repositório descreve o que a ferramenta faz e como ela é estruturada, sem incluir o código de extração proprietário.
+> **Status deste repositório:** projeto em desenvolvimento ativo. Alguns arquivos já estão publicados (scripts de build e documentação); o código-fonte da engine de extração e da interface gráfica ainda está em desenvolvimento privado e será publicado conforme avança. Veja a seção [Status de publicação](#status-de-publicação) abaixo para o detalhamento por arquivo.
 
 ---
 
@@ -24,6 +24,19 @@ Empresas com múltiplas unidades consumidoras (UCs) recebem dezenas de faturas e
 | Equatorial            | PA     | Automática        |
 
 O parser identifica a distribuidora pelo conteúdo do PDF (textos e padrões característicos de cada layout), sem precisar de configuração manual. Quando uma pasta contém faturas de mais de uma distribuidora, todas são processadas na mesma execução e consolidadas no mesmo arquivo de saída.
+
+---
+
+## Estrutura do repositório
+
+```
+.
+├── README.md
+├── build/
+│   └── BUILD.bat          ← script de empacotamento (PyInstaller)
+└── docs/
+    └── INSTRUCOES.md      ← guia de build e instalador
+```
 
 ---
 
@@ -89,6 +102,8 @@ O arquivo de saída é organizado em abas temáticas, todas com cabeçalhos colo
 5. O Excel final é gerado com todas as abas, uma linha por fatura/mês em cada aba correspondente.
 6. O log de execução mostra o progresso e eventuais erros por arquivo, sem interromper o processamento dos demais.
 
+Detalhes de build e empacotamento: [`docs/INSTRUCOES.md`](docs/INSTRUCOES.md)
+
 ---
 
 ## Roadmap
@@ -103,6 +118,16 @@ O arquivo de saída é organizado em abas temáticas, todas com cabeçalhos colo
 
 ---
 
-## Licença e acesso ao código
+## Status de publicação
 
-Este é um projeto privado em desenvolvimento. O código-fonte completo não está publicado neste repositório. Para acesso ao código ou parceria no projeto, entre em contato com o mantenedor.
+| Arquivo / Componente            | Status                          |
+|----------------------------------|----------------------------------|
+| `README.md`                      | ✅ Publicado |
+| `docs/INSTRUCOES.md`             | ✅ Publicado |
+| `build/BUILD.bat`                | ✅ Publicado |
+| `parser_neoenergia.py` (engine)  | 🔧 Em desenvolvimento — não publicado |
+| `jbl_parser_gui.py` (interface)  | 🔧 Em desenvolvimento — não publicado |
+| `JBLParser_Setup.iss` (instalador)| 🔧 Em desenvolvimento — não publicado |
+| Ícone e assets visuais           | 🔧 Em desenvolvimento — não publicado |
+
+Este repositório é atualizado conforme o projeto avança. Para acesso ao código-fonte completo ou parceria no projeto, entre em contato com o mantenedor.
